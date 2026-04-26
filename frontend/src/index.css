@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply font-body text-gray-800 antialiased; }
+}
+
+@layer components {
+  .input {
+    @apply w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:outline-none focus:border-cafe-amber focus:ring-2 focus:ring-cafe-amber/20 transition;
+  }
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
