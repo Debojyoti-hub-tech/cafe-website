@@ -20,7 +20,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-cafe-dark text-cafe-cream/70 py-10 mt-auto">
+    <footer className="bg-cafe-dark/95 text-cafe-cream/70 py-10 mt-auto border-t border-cafe-cream/10">
       <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Brand */}
         <div>

@@ -112,7 +112,7 @@ export default function Booking() {
         </p>
       </div>
 
-      <form onSubmit={handleSubmitForm} className="bg-white shadow-xl rounded-3xl p-8 space-y-5">
+      <form onSubmit={handleSubmitForm} className="glass-panel rounded-3xl p-8 space-y-5">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>

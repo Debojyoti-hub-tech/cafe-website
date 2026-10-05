@@ -35,7 +35,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-[80vh] flex items-center justify-center px-4 bg-cafe-light">
+    <div className="min-h-[80vh] flex items-center justify-center px-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <Link to="/" className="font-display text-3xl text-cafe-amber">☕ Café Lumière</Link>
@@ -49,7 +49,7 @@ export default function Login() {
           )}
         </div>
 
-        <div className="bg-white shadow-xl rounded-3xl p-8">
+        <div className="glass-panel rounded-3xl p-8">
           <form onSubmit={handleSubmit} className="space-y-4">
             {isRegister && (
               <>
