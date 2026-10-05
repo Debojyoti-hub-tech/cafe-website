@@ -93,7 +93,7 @@ export default function Booking() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-12">
+    <div className="page-shell max-w-2xl mx-auto px-4 py-14">
       {step === "otp" && (
         <OtpModal
           email={form.guestEmail}
@@ -104,8 +104,8 @@ export default function Booking() {
       )}
 
       <div className="text-center mb-10">
-        <p className="text-cafe-amber text-sm tracking-widest uppercase mb-2">Reserve Your Spot</p>
-        <h1 className="font-display text-5xl text-cafe-dark">Book a Table</h1>
+        <p className="eyebrow mb-3">A seat at the table</p>
+        <h1 className="font-display text-5xl md:text-6xl text-cafe-dark">Book your moment</h1>
         <p className="text-gray-500 mt-3">
           Logged in as <span className="font-medium text-cafe-dark">{user?.name}</span>.
           Your details are pre-filled.

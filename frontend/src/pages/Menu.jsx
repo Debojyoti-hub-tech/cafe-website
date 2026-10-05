@@ -109,7 +109,7 @@ export default function Menu() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
+    <div className="page-shell max-w-6xl mx-auto px-4 py-14">
       {/* Location modal */}
       {flowStep === "location" && (
         <LocationModal
@@ -128,17 +128,17 @@ export default function Menu() {
         />
       )}
 
-      <div className="text-center mb-10">
-        <p className="text-cafe-amber text-sm tracking-widest uppercase mb-2">What We Serve</p>
-        <h1 className="font-display text-5xl text-cafe-dark mb-4">Our Menu</h1>
+      <div className="text-center mb-12">
+        <p className="eyebrow mb-3">Curated for your senses</p>
+        <h1 className="font-display text-5xl md:text-6xl text-cafe-dark mb-4">The Lumière Menu</h1>
         <p className="text-gray-500 max-w-lg mx-auto">Made fresh every day with locally sourced ingredients and a whole lot of love.</p>
       </div>
 
       <div className="flex items-center gap-3 max-w-md mx-auto mb-8">
         <input type="text" placeholder="Search dishes…" value={search} onChange={(e) => setSearch(e.target.value)}
-          className="flex-1 px-5 py-3 border border-gray-200 rounded-full shadow-sm focus:outline-none focus:border-cafe-amber focus:ring-2 focus:ring-cafe-amber/30 transition" />
+          className="input flex-1 px-5 py-3 rounded-full" />
         {user && (
-          <button onClick={() => setCartOpen(true)} className="relative px-4 py-3 bg-cafe-dark text-cafe-cream rounded-full hover:bg-cafe-brown transition-colors text-sm font-medium flex-shrink-0">
+          <button onClick={() => setCartOpen(true)} className="relative px-4 py-3 bg-cafe-dark text-cafe-cream rounded-full hover:bg-cafe-brown transition-colors text-sm font-medium flex-shrink-0 shadow-lg">
             🛒
             {cartCount > 0 && (
               <span className="absolute -top-1 -right-1 bg-cafe-amber text-cafe-dark text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">{cartCount}</span>
@@ -150,7 +150,7 @@ export default function Menu() {
       <div className="flex flex-wrap justify-center gap-2 mb-10">
         {CATEGORIES.map((cat) => (
           <button key={cat} onClick={() => setActiveCategory(cat)}
-            className={`px-5 py-2 rounded-full text-sm font-medium capitalize transition-all ${activeCategory === cat ? "bg-cafe-dark text-cafe-cream shadow" : "bg-gray-100 text-gray-600 hover:bg-cafe-amber/20 hover:text-cafe-dark"}`}>
+            className={`px-5 py-2 rounded-full text-sm font-medium capitalize transition-all ${activeCategory === cat ? "bg-cafe-dark text-cafe-cream shadow-lg" : "glass-panel text-gray-600 hover:bg-cafe-amber/20 hover:text-cafe-dark"}`}>
             {cat}
           </button>
         ))}
@@ -175,7 +175,7 @@ export default function Menu() {
       {cartOpen && (
         <div className="fixed inset-0 z-40 flex">
           <div className="absolute inset-0 bg-black/40" onClick={() => setCartOpen(false)} />
-          <div className="relative ml-auto bg-white w-full max-w-sm h-full shadow-2xl flex flex-col">
+          <div className="relative ml-auto bg-cafe-light/95 backdrop-blur-xl w-full max-w-sm h-full shadow-2xl flex flex-col border-l border-white/60">
             <div className="flex items-center justify-between p-5 border-b border-gray-100">
               <h2 className="font-display text-2xl text-cafe-dark">Your Order</h2>
               <button onClick={() => setCartOpen(false)} className="text-gray-400 hover:text-gray-600 text-xl">✕</button>
@@ -189,7 +189,7 @@ export default function Menu() {
                 </div>
               ) : (
                 cart.map((item) => (
-                  <div key={item._id} className="flex items-center gap-3 bg-gray-50 rounded-xl p-3">
+                  <div key={item._id} className="flex items-center gap-3 glass-panel rounded-xl p-3">
                     <div className="flex-1 min-w-0">
                       <p className="font-medium text-cafe-dark text-sm truncate">{item.name}</p>
                       <p className="text-cafe-amber text-sm font-semibold">₹{item.price} × {item.qty}</p>

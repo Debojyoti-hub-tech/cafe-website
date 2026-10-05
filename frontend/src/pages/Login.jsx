@@ -49,7 +49,7 @@ export default function Login() {
           )}
         </div>
 
-        <div className="glass-panel rounded-3xl p-8">
+        <div className="glass-panel rounded-[2rem] p-8 md:p-10">
           <form onSubmit={handleSubmit} className="space-y-4">
             {isRegister && (
               <>

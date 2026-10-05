@@ -4,6 +4,11 @@
 
 @layer base {
   html { scroll-behavior: smooth; }
+  ::selection { background: #c8882a; color: #1a0f0a; }
+  * { scrollbar-width: thin; scrollbar-color: rgba(107, 58, 42, 0.45) transparent; }
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(107, 58, 42, 0.45); border-radius: 999px; }
   body {
     @apply font-body text-gray-800 antialiased;
     background:
@@ -35,6 +40,48 @@
     box-shadow: 0 18px 45px rgba(26, 15, 10, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
+  }
+
+  .page-shell {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .page-shell::before,
+  .page-shell::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 999px;
+    filter: blur(65px);
+    opacity: 0.28;
+    pointer-events: none;
+  }
+
+  .page-shell::before { top: 4rem; left: -10rem; background: #c8882a; }
+  .page-shell::after { right: -10rem; bottom: 4rem; background: #6b3a2a; }
+
+  .eyebrow {
+    @apply text-cafe-amber text-xs font-semibold tracking-[0.28em] uppercase;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-cafe-amber text-cafe-dark font-semibold rounded-xl transition-all duration-200;
+    box-shadow: 0 10px 24px rgba(200, 136, 42, 0.22);
+  }
+
+  .btn-primary:hover {
+    @apply bg-amber-400;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(200, 136, 42, 0.3);
+  }
+
+  .status-pill {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold capitalize;
+    background: rgba(200, 136, 42, 0.13);
+    color: #6b3a2a;
   }
 }
 

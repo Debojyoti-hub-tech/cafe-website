@@ -53,7 +53,7 @@ function ContactSettings() {
               value={form[name]}
               onChange={(e) => setForm((p) => ({ ...p, [name]: e.target.value }))}
               placeholder={placeholder}
-              className="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:outline-none focus:border-cafe-amber focus:ring-2 focus:ring-cafe-amber/20 transition"
+              className="input"
             />
           </div>
         ))}
@@ -63,7 +63,7 @@ function ContactSettings() {
             value={form.mapLink}
             onChange={(e) => setForm((p) => ({ ...p, mapLink: e.target.value }))}
             placeholder="https://maps.google.com/..."
-            className="w-full px-4 py-2.5 border border-gray-200 rounded-xl focus:outline-none focus:border-cafe-amber focus:ring-2 focus:ring-cafe-amber/20 transition"
+            className="input"
           />
           <p className="text-xs text-gray-400 mt-1">Paste any Google Maps, Google My Business, or Waze link. It will appear as a button in the footer.</p>
         </div>
@@ -255,7 +255,7 @@ export default function AdminPanel() {
                 <p className="text-gray-400 text-center py-12">No orders yet.</p>
               ) : (
                 orders.map((order) => (
-                  <div key={order._id} className="bg-white rounded-2xl shadow p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+                  <div key={order._id} className="glass-panel rounded-2xl p-5 flex flex-col sm:flex-row sm:items-center gap-4">
                     <div className="flex-1">
                       <p className="font-semibold text-cafe-dark">
                         {order.user?.name || "Guest"}{" "}
@@ -290,7 +290,7 @@ export default function AdminPanel() {
                 <p className="text-gray-400 text-center py-12">No bookings yet.</p>
               ) : (
                 bookings.map((b) => (
-                  <div key={b._id} className="bg-white rounded-2xl shadow p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+                  <div key={b._id} className="glass-panel rounded-2xl p-5 flex flex-col sm:flex-row sm:items-center gap-4">
                     <div className="flex-1">
                       <p className="font-semibold text-cafe-dark">{b.guestName}</p>
                       <p className="text-sm text-gray-500 mt-0.5">{b.guestEmail} · {b.guestPhone}</p>
@@ -328,7 +328,7 @@ export default function AdminPanel() {
                 <div className="flex flex-wrap gap-2">
                   {["all", ...CATEGORIES].map((cat) => (
                     <button key={cat} onClick={() => setMenuCategory(cat)}
-                      className={`px-4 py-1.5 rounded-full text-xs font-medium capitalize transition-all ${menuCategory === cat ? "bg-cafe-dark text-cafe-cream" : "bg-gray-100 text-gray-600 hover:bg-cafe-amber/20"}`}>
+                      className={`px-4 py-1.5 rounded-full text-xs font-medium capitalize transition-all ${menuCategory === cat ? "bg-cafe-dark text-cafe-cream" : "glass-panel text-gray-600 hover:bg-cafe-amber/20"}`}>
                       {cat}{cat !== "all" && ` (${foods.filter((f) => f.category === cat).length})`}
                     </button>
                   ))}
@@ -456,7 +456,7 @@ export default function AdminPanel() {
                   </div>
                 ) : (
                   filteredFoods.map((food) => (
-                    <div key={food._id} className="bg-white rounded-2xl shadow p-4 flex items-center gap-4">
+                    <div key={food._id} className="glass-panel rounded-2xl p-4 flex items-center gap-4">
                       <div className="w-14 h-14 rounded-xl bg-cafe-cream flex items-center justify-center overflow-hidden flex-shrink-0">
                         {food.image ? <img src={food.image} alt={food.name} className="w-full h-full object-cover" /> : <span className="text-2xl">🍽️</span>}
                       </div>
