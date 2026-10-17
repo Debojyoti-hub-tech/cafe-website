@@ -62,6 +62,11 @@ npm run dev
 
 Frontend runs at `http://localhost:5173` and proxies `/api` → `http://localhost:5000`.
 
+The backend warms the available menu from MongoDB at startup and refreshes the
+in-memory menu cache every 30 minutes. Menu requests use this cache to avoid a
+database query on each customer visit. Menu changes made through the admin API
+invalidate and refresh the cache.
+
 ---
 
 ## API Routes

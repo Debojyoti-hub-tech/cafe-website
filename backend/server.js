@@ -9,6 +9,7 @@ import orderRoutes from "./routes/order.js";
 import bookingRoutes from "./routes/booking.js";
 import otpRoutes from "./routes/otp.js";
 import configRoutes from "./routes/config.js";
+import { startMenuCacheBot } from "./services/menuCache.js";
 
 dotenv.config();
 
@@ -27,8 +28,9 @@ app.get("/api/health", (req, res) => res.json({ status: "ok" }));
 
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => {
+  .then(async () => {
     console.log("✅ MongoDB connected");
+    await startMenuCacheBot();
     const PORT = process.env.PORT || 5000;
     app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
   })

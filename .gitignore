@@ -8,6 +8,8 @@ frontend/dist/
 backend/dist/
 build/
 
+venv/
+.venv/
 # Environment files
 .env
 .env.*
