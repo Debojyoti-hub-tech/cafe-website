@@ -2,9 +2,9 @@ export default function FoodCard({ food, onOrder }) {
   const { name, description, price, image, isVeg, rating, preparationTime, category } = food;
 
   return (
-    <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+    <div className="glass-panel rounded-2xl hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 overflow-hidden group">
       {/* Image */}
-      <div className="relative h-48 bg-cafe-cream overflow-hidden">
+      <div className="relative h-48 bg-cafe-cream/70 overflow-hidden">
         {image ? (
           <img
             src={image}

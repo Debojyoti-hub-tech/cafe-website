@@ -67,7 +67,7 @@ export default function OtpModal({ email, purpose, onVerified, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
-      <div className="relative bg-white rounded-3xl shadow-2xl p-8 w-full max-w-sm text-center">
+      <div className="relative glass-panel rounded-3xl shadow-2xl p-8 w-full max-w-sm text-center">
         <button onClick={onClose} className="absolute top-4 right-5 text-gray-400 hover:text-gray-600 text-xl">✕</button>
         <div className="text-5xl mb-4">📧</div>
         <h2 className="font-display text-2xl text-cafe-dark mb-2">Verify Your Email</h2>

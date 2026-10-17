@@ -29,7 +29,7 @@ const AdminRoute = ({ children }) => {
 };
 
 const AppRoutes = () => (
-  <div className="flex flex-col min-h-screen bg-cafe-light font-body">
+  <div className="flex flex-col min-h-screen bg-transparent font-body">
     <Navbar />
     <main className="flex-1">
       <Routes>

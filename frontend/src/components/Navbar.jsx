@@ -22,7 +22,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-cafe-dark text-cafe-cream sticky top-0 z-50 shadow-lg">
+    <nav className="glass-dark text-cafe-cream sticky top-0 z-50 shadow-lg">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         <Link to="/" className="font-display text-2xl text-cafe-amber tracking-wide">☕ Café Lumière</Link>
 
@@ -49,7 +49,7 @@ export default function Navbar() {
               {profileOpen && (
                 <>
                   <div className="fixed inset-0 z-10" onClick={() => setProfileOpen(false)} />
-                  <div className="absolute right-0 mt-2 w-52 bg-white rounded-2xl shadow-xl py-2 z-20">
+                  <div className="absolute right-0 mt-2 w-52 glass-panel rounded-2xl shadow-xl py-2 z-20 text-cafe-dark">
                     <div className="px-4 py-2 border-b border-gray-100">
                       <p className="font-semibold text-cafe-dark text-sm">{user.name}</p>
                       <p className="text-xs text-gray-400 truncate">{user.email}</p>
@@ -91,7 +91,7 @@ export default function Navbar() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden bg-cafe-dark border-t border-cafe-brown px-4 pb-4 flex flex-col gap-3">
+        <div className="md:hidden bg-cafe-dark/95 border-t border-cafe-brown px-4 pb-4 flex flex-col gap-3">
           {navLinks.map(({ to, label }) => (
             <NavLink key={to} to={to} onClick={() => setMenuOpen(false)}
               className="text-cafe-cream hover:text-cafe-amber py-1">{label}</NavLink>

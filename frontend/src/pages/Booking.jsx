@@ -93,7 +93,7 @@ export default function Booking() {
   }
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-12">
+    <div className="page-shell max-w-2xl mx-auto px-4 py-14">
       {step === "otp" && (
         <OtpModal
           email={form.guestEmail}
@@ -104,15 +104,15 @@ export default function Booking() {
       )}
 
       <div className="text-center mb-10">
-        <p className="text-cafe-amber text-sm tracking-widest uppercase mb-2">Reserve Your Spot</p>
-        <h1 className="font-display text-5xl text-cafe-dark">Book a Table</h1>
+        <p className="eyebrow mb-3">A seat at the table</p>
+        <h1 className="font-display text-5xl md:text-6xl text-cafe-dark">Book your moment</h1>
         <p className="text-gray-500 mt-3">
           Logged in as <span className="font-medium text-cafe-dark">{user?.name}</span>.
           Your details are pre-filled.
         </p>
       </div>
 
-      <form onSubmit={handleSubmitForm} className="bg-white shadow-xl rounded-3xl p-8 space-y-5">
+      <form onSubmit={handleSubmitForm} className="glass-panel rounded-3xl p-8 space-y-5">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>

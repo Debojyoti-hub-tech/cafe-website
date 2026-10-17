@@ -50,10 +50,10 @@ export default function Profile() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-12">
+    <div className="page-shell max-w-2xl mx-auto px-4 py-14">
       {/* Header */}
       <div className="text-center mb-10">
-        <div className="w-20 h-20 rounded-full bg-cafe-amber/20 flex items-center justify-center text-4xl mx-auto mb-4">
+        <div className="w-24 h-24 rounded-[2rem] bg-cafe-amber/20 border border-cafe-amber/30 flex items-center justify-center text-4xl mx-auto mb-4 shadow-[inset_4px_4px_10px_rgba(107,58,42,0.12),0_14px_30px_rgba(107,58,42,0.12)]">
           {user?.name?.charAt(0).toUpperCase()}
         </div>
         <h1 className="font-display text-4xl text-cafe-dark">{user?.name}</h1>
@@ -66,7 +66,7 @@ export default function Profile() {
       </div>
 
       {/* Account Info Card */}
-      <div className="bg-white rounded-3xl shadow-lg p-6 mb-6">
+      <div className="glass-panel rounded-3xl p-6 mb-6">
         <h2 className="font-display text-xl text-cafe-dark mb-4 flex items-center gap-2">
           <span>👤</span> Account Info
         </h2>
@@ -90,7 +90,7 @@ export default function Profile() {
       </div>
 
       {/* Change Name */}
-      <div className="bg-white rounded-3xl shadow-lg p-6 mb-6">
+      <div className="glass-panel rounded-3xl p-6 mb-6">
         <h2 className="font-display text-xl text-cafe-dark mb-4 flex items-center gap-2">
           <span>✏️</span> Change Name
         </h2>
@@ -117,7 +117,7 @@ export default function Profile() {
       </div>
 
       {/* Change Password */}
-      <div className="bg-white rounded-3xl shadow-lg p-6">
+      <div className="glass-panel rounded-3xl p-6">
         <h2 className="font-display text-xl text-cafe-dark mb-4 flex items-center gap-2">
           <span>🔑</span> Change Password
         </h2>

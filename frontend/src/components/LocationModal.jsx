@@ -87,7 +87,7 @@ export default function LocationModal({ onConfirm, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
-      <div className="relative bg-white rounded-3xl shadow-2xl p-7 w-full max-w-md">
+      <div className="relative glass-panel rounded-3xl shadow-2xl p-7 w-full max-w-md">
         <button onClick={onClose} className="absolute top-4 right-5 text-gray-400 hover:text-gray-600 text-xl">✕</button>
 
         <div className="text-4xl mb-3 text-center">📍</div>

@@ -27,7 +27,7 @@ export default function Home() {
         <div className="absolute top-10 right-10 w-72 h-72 rounded-full bg-cafe-amber/10 blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-cafe-brown/20 blur-3xl pointer-events-none" />
 
-        <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
+        <div className="relative z-10 text-center px-5 py-12 max-w-3xl mx-auto glass-dark rounded-[2rem]">
           <p className="text-cafe-amber text-sm tracking-[0.3em] uppercase mb-4 font-body">
             Welcome to
           </p>
@@ -41,13 +41,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/menu"
-              className="px-8 py-3 bg-cafe-amber text-cafe-dark font-semibold rounded-full hover:bg-amber-400 transition-colors text-lg"
+              className="px-8 py-3 bg-cafe-amber text-cafe-dark font-semibold rounded-full hover:bg-amber-400 transition-colors text-lg shadow-[0_10px_25px_rgba(200,136,42,0.3)]"
             >
               Explore Menu
             </Link>
             <Link
               to="/booking"
-              className="px-8 py-3 border border-cafe-cream/40 text-cafe-cream rounded-full hover:border-cafe-amber hover:text-cafe-amber transition-colors text-lg"
+              className="px-8 py-3 border border-cafe-cream/40 text-cafe-cream rounded-full hover:border-cafe-amber hover:text-cafe-amber transition-colors text-lg bg-cafe-cream/5"
             >
               Reserve a Table
             </Link>
@@ -56,7 +56,7 @@ export default function Home() {
       </section>
 
       {/* Features Strip */}
-      <section className="bg-cafe-amber text-cafe-dark py-6">
+      <section className="bg-cafe-amber/90 text-cafe-dark py-6 shadow-[0_12px_35px_rgba(107,58,42,0.15)]">
         <div className="max-w-5xl mx-auto px-4 flex flex-wrap justify-center gap-8 text-center font-medium">
           {[
             ["☕", "Artisan Coffee"],
@@ -100,7 +100,7 @@ export default function Home() {
       )}
 
       {/* CTA Banner */}
-      <section className="bg-cafe-brown text-cafe-cream text-center py-14 px-4">
+      <section className="bg-cafe-brown/95 text-cafe-cream text-center py-14 px-4 border-y border-cafe-cream/10">
         <h2 className="font-display text-4xl mb-4">
           Planning a Special Evening?
         </h2>

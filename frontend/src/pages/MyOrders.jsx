@@ -117,7 +117,7 @@ export default function MyOrders() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-12">
+    <div className="page-shell max-w-3xl mx-auto px-4 py-14">
       {otpStep && (
         <OtpModal
           email={user?.email}
@@ -128,7 +128,8 @@ export default function MyOrders() {
       )}
 
       <div className="text-center mb-8">
-        <h1 className="font-display text-4xl text-cafe-dark">My Activity</h1>
+        <p className="eyebrow mb-3">Your Lumière journey</p>
+        <h1 className="font-display text-4xl md:text-5xl text-cafe-dark">My Activity</h1>
         <p className="text-gray-500 text-sm mt-1">Track and manage your orders and reservations</p>
       </div>
 
@@ -160,7 +161,7 @@ export default function MyOrders() {
                 </div>
               ) : (
                 orders.map((order) => (
-                  <div key={order._id} className="bg-white rounded-2xl shadow p-5">
+                  <div key={order._id} className="glass-panel rounded-2xl p-5">
                     <div className="flex items-start justify-between gap-3 mb-3">
                       <div>
                         <p className="font-semibold text-cafe-dark text-sm">
@@ -215,7 +216,7 @@ export default function MyOrders() {
                 </div>
               ) : (
                 bookings.map((b) => (
-                  <div key={b._id} className="bg-white rounded-2xl shadow p-5">
+                  <div key={b._id} className="glass-panel rounded-2xl p-5">
                     {/* Reschedule form inline */}
                     {rescheduleTarget?._id === b._id ? (
                       <form onSubmit={handleRescheduleSubmit} className="space-y-3">
@@ -232,7 +233,7 @@ export default function MyOrders() {
                             <label className="block text-xs text-gray-500 mb-1">New Time</label>
                             <select value={rescheduleForm.time}
                               onChange={(e) => setRescheduleForm((p) => ({ ...p, time: e.target.value }))}
-                              className="w-full px-3 py-2 border border-gray-200 rounded-xl text-sm focus:outline-none focus:border-cafe-amber bg-white">
+                              className="input w-full px-3 py-2 text-sm">
                               <option value="">Select</option>
                               {TIME_SLOTS.map((t) => <option key={t} value={t}>{t}</option>)}
                             </select>
